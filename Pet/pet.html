@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<head>
+
+    <title>Exercícios</title>
+
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+
+</head>
+<body>
+
+</body>
+
+<script>
+
+	let pets = [{
+            nome: "Doguinho A",
+            idade: 4,
+            tipoPet: "cachorro"
+        }, {
+            nome: "Doguinho B",
+            idade: 5,
+            tipoPet: "cachorro"
+        }, {
+            nome: "Doguinho C",
+            idade: 11,
+            tipoPet: "cachorro"
+        }, {
+            nome: "Gatinho A",
+            idade: 17,
+            tipoPet: "gato"
+        }, {
+            nome: "Gatinho H",
+            idade: 2,
+            tipoPet: "gato"
+        }, {
+            nome: "Passarinho A",
+            idade: 12,
+            tipoPet: "pássaro"
+        }, {
+            nome: "Doguinho Z",
+            idade: 16,
+            tipoPet: "cachorro"
+        }, {
+            nome: "Doguinho H",
+            idade: 4,
+            tipoPet: "cachorro"
+        }, {
+            nome: "Gatinho P",
+            idade: 3,
+            tipoPet: "gato"
+        }];
+
+
+
+        // 1 - LISTAR SOMENTE OS GATOS
+
+        console.log('Resolucao ex 1');
+        let gatos = pets.filter(pets => {
+            return pets.tipoPet === 'gato'
+        });
+        console.log(gatos);
+
+
+
+        // 2 - LISTAR SOMENTE ANIMAIS COM A IDADE MAIOR QUE 7
+
+        console.log('Resolucao ex 2');
+
+        let anos = pets.filter(pets => {
+            return pets.idade > 7 && pets.tipoPet === 'gato'
+        });
+        console.log(anos);
+
+
+        // 3 - SOME A IDADE DE TODOS OS PETS
+        console.log('Resolucao ex 3');
+        let somaIdade = pets.reduce((soma, pet) => {
+            return soma + (parseInt(pet.somaIdade))
+        },0);
+        console.log(somaIdade);
+
+
+        // 4 - TRAGA SOMENTE OS NOME
+        console.log('Resolucao ex 4')
+        
+        let namE = pets.map(pet => pet.namE);
+        console.log(namE);
+
+
+        // 5 - TRAGA A IDADE HUMANA DO PETS
+        console.log('Resolucao ex 4')
+        let IdadeHumana = pets.map(pet => {return parseInt(pet.IdadeHumana)*7});
+        console.log(IdadeHumana);
+
+
+        // 6 - MOSTRE A QUANTIDADE DE CACHORROS NA LISTA
+        console.log('Resolucao ex 4')
+        let qtnDog = pets.filter (pet => { return pet.tipoPet === "cachorro" }).length;
+        console.log(qtnDog);
+
+
+        // 7 - TRAGA SOMENTE O NOME E O TIPO DO PET
+        console.log('Resolucao ex 4')
+
+        let nomePet = pets.map(pet => {return{
+            nome : pet.nome,
+            tipoPet : pet.tipoPet
+        }
+        
+        });
+
+        console.log(nomePet);
+
+       
+</script>
+
+
+
+</html>
